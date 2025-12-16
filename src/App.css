@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg1: #F6EEFA; 
+  --bg2: #EFDFF8; 
+  --card: rgba(255,255,255,0.9);
+  --accent: #6B3FA0;
+  --muted: #6c6c7a;
+  --glass-shadow: 0 8px 30px rgba(100,80,120,0.12);
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+html,body,#root { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(135deg, var(--bg1) 0%, var(--bg2) 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.app { width: 100%; max-width: 920px; }
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.85));
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--glass-shadow);
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.card-header h1 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -0.2px;
+  color: var(--accent);
+}
+.subtitle {
+  margin: 6px 0 16px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.search {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(107,63,160,0.12);
+  background: rgba(250,246,255,0.8);
+  font-size: 15px;
+  outline: none;
+  transition: box-shadow .18s, transform .12s;
+}
+.input:focus {
+  box-shadow: 0 6px 18px rgba(107,63,160,0.12);
+  transform: translateY(-1px);
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+.btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--accent);
+  transition: transform .12s, box-shadow .12s;
+}
+.btn:hover { transform: translateY(-3px); }
+.btn.primary {
+  background: linear-gradient(90deg, var(--accent), #8f5db8);
+  color: white;
+  box-shadow: 0 6px 18px rgba(107,63,160,0.12);
+}
+
+/* status area */
+.status { min-height: 56px; margin-bottom: 12px; }
+.loading {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: var(--muted);
+  font-weight: 600;
+}
+.spinner {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  border: 3px solid rgba(107,63,160,0.15);
+  border-top-color: var(--accent);
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.error {
+  color: #b00020;
+  background: rgba(176,0,32,0.06);
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.weather-card {
+  padding: 14px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(239,231,251,0.6), rgba(255,255,255,0.4));
+  box-shadow: 0 6px 26px rgba(100,80,120,0.06);
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.city h2 { margin: 0; color: #3b2a5b; font-size: 18px; }
+.desc { color: var(--muted); font-size: 13px; margin-top: 6px; text-transform: capitalize; }
+
+.temp { text-align: right; }
+.temp-value { font-size: 36px; font-weight: 700; color: #4b2f7a; }
+.feels { color: var(--muted); font-size: 13px; margin-top: 4px; }
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+.detail-item {
+  background: rgba(255,255,255,0.6);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid rgba(107,63,160,0.04);
+}
+.detail-item .label { color: var(--muted); font-size: 12px; }
+.detail-item .value { font-weight: 700; font-size: 14px; margin-top: 6px; }
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.ow-icon { width: 48px; height: 48px; }
+
+.hint { color: var(--muted); font-weight: 600; }
+
+@media (max-width: 480px) {
+  .card { padding: 18px; border-radius: 12px; }
+  .temp-value { font-size: 28px; }
+  .details { grid-template-columns: 1fr; }
+}
