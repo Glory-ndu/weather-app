@@ -7,7 +7,7 @@ The app fetches real time weather data and displays key information based on use
 ---
 
 ## Features
-- City-based weather search
+- City based weather search
 - API integration (OpenWeather)
 - Loading and error states
 - Conditional rendering
@@ -19,7 +19,7 @@ The app fetches real time weather data and displays key information based on use
 - React fundamentals
 - `useEffect` and state management
 - Working with APIs
-- Problem-solving through debugging and logic handling
+- Problem solving through debugging and logic handling
 
 ---
 
