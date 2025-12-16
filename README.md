@@ -2,7 +2,7 @@
 
 A simple weather dashboard built with **React** as part of a personal learning project supported through mentorship.
 
-The app fetches real-time weather data and displays key information based on user input.
+The app fetches real time weather data and displays key information based on user input.
 
 ---
 
@@ -32,4 +32,4 @@ The app fetches real-time weather data and displays key information based on use
 ---
 
 ## Project Outcome
-Developed a functional React application that strengthened understanding of side effects, API handling, and component-based software development.
+Developed a functional React application that strengthened understanding of side effects, API handling, and component based software development.
